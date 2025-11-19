@@ -1,0 +1,466 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+.about-content {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #444;
+}
+.about-content ul {
+    margin-left: 40px;  /* Indent from the left */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.about-content li {
+    margin-bottom: 8px;
+}
+
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.name {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.title {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.subtitle {
+    font-size: 1.0em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.highlight-text {
+    color: #e4a068; 
+}
+
+
+/* Logo block */
+.affiliation-block {
+    text-align: center; /* Ensures text is centered */
+    margin-top: 0.5rem; /* Adds a little space below the name */
+    margin-bottom: 1rem; /* Adds space before social links */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the logos */
+    align-items: center;     /* Vertically aligns them if heights differ */
+    gap: 1rem;               /* Creates space BETWEEN the logos */
+    margin-bottom: 0.75rem;  /* Space between logos and text below */
+}
+
+.affiliation-logo {
+    height: 30px; /* Adjust this height as needed */
+    width: auto;  /* Maintains aspect ratio */
+    max-width: 100px;
+    object-fit: contain;
+}
+
+/* */
+/* Generic Links and GitHub, Paper, Project Page*/
+/* */
+
+/* Publications and Project Pages */
+.publication {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 35px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center; 
+}
+
+.publication:last-child {
+    border-bottom: none;
+}
+
+/* --- MODIFIED START: Using CSS Grid for publications with a description --- */
+
+/* 1. Set up a simple 2-column grid when a description is present */
+.publication:has(.pub-description) {
+    /* Reset flex properties for the grid container */
+    display: grid;
+    /* Define the columns: Media width (250px) and Content/Description width (auto/fill) */
+    grid-template-columns: 250px 1fr; 
+    gap: 25px; /* Use the existing gap */
+    /* Align items to the top of the row */
+    align-items: start;
+    /* Remove the bottom border from the grid container (optional, but cleaner) */
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+/* 2. Position the elements within the grid */
+
+/* Media block goes in the first column and spans both content/description rows */
+.publication:has(.pub-description) .pub-media {
+    grid-column: 1 / 2; /* Span the first column */
+    grid-row: 1 / 3;    /* Span the first two rows (to align with content and description) */
+    align-self: start;  /* Align the media stack to the top of its grid area */
+    /* Remove old flex properties */
+    flex-shrink: unset;
+    order: unset;
+    margin-left: unset;
+}
+
+/* Content block goes in the second column, first row */
+.publication:has(.pub-description) .pub-content {
+    grid-column: 2 / 3; /* Span the second column */
+    grid-row: 1 / 2;    /* Span the first row */
+    /* Remove old flex properties */
+    flex-shrink: unset;
+    order: unset;
+}
+
+/* Description block goes in the second column, second row */
+.publication:has(.pub-description) .pub-description {
+    grid-column: 2 / 3; /* Span the second column */
+    grid-row: 2 / 3;    /* Span the second row, naturally placing it below pub-content */
+    /* Reset all conflicting fixed width/margin/order rules */
+    width: auto;
+    margin-left: 0; 
+    order: unset;
+    margin-top: 5px; /* Restore margin */
+    padding-top: 0px; /* Restore padding */
+    border-top: 1px solid #f0f0f0; /* Restore separator */
+}
+
+/* --- MODIFIED END --- */
+
+
+/* Standard pub-content sizing */
+.pub-content {
+    flex: 1;
+}
+
+.pub-title {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.pub-authors {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+.pub-venue {
+    color: #888;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+/* Main block for giving a small summary or explanation on the project */
+.pub-description {
+    margin-top: 5px; /* Space between links and description */
+    padding-top: 0px; /* More space */
+    border-top: 1px solid #f0f0f0; /* Faint line to separate */
+    font-size: 0.9em;
+    color: #444;
+    line-height: 1.7;
+}
+
+.pub-media {
+    flex-shrink: 0;
+    display: flex; /* Makes this a flex container */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Clips the images/videos to the rounded corners */
+}
+
+/* Use this for a vertical stack */
+.pub-media.vertical-media {
+    flex-direction: column;
+    width: 250px; /* Or your preferred width */
+    /* Height will be automatic */
+}
+
+/* Use this for a horizontal (side-by-side) layout */
+.pub-media.horizontal-media {
+    flex-direction: row;
+    width: 400px; /* Two 200px images side-by-side */
+    height: 150px; /* Or your preferred height */
+}
+
+.pub-media-item {
+    display: block;
+    object-fit: cover;
+}
+
+/* For images that should be fully visible, not cropped */
+.pub-media-item.contain {
+    object-fit: contain;
+}
+
+/* How items fill the container in each layout */
+.pub-media.vertical-media .pub-media-item {
+    /* width: 100%; */
+    width: 200px;
+    height: 150px; /* Each item's height */
+}
+
+.pub-media.horizontal-media .pub-media-item {
+    width: 50%;
+    height: 100%;
+}
+
+/* Advanced Tiling of Content */
+/* NOTE: You need to manually tweak this depending on how you want to tile */
+.pub-media.horizontal-tile {
+    flex-direction: row;
+    width: 600px; /* Example: 3 items * 200px wide, adjust as needed */
+    height: 150px; /* Keep the original height */
+    gap: 2px; /* Small gap between items */
+}
+
+.pub-media.horizontal-tile .pub-media-item {
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+
+.pub-links a:hover,
+.pub-links a:focus {
+    color: #084c75; /* A darker shade on hover */
+    text-decoration: underline;
+}
+
+/* Special class for links inside text */
+.inline-link-institutions {
+    color: #EA4335;       /* Google Red */
+    font-weight: 600;      /* Slightly bolder to stand out */
+    text-decoration: none; /* Removes the default underline */
+    transition: all 0.2s ease-in-out;
+}
+
+.inline-link-institutions :hover,
+.inline-link-institutions :focus {
+    color: #084c75;       /* Darker tone on hover */
+    border-bottom: 1px solid #084c75; /* Becomes a solid line on hover */
+}
+
+.inline-link-people {
+    color: #66a9d3;       /* Pastel Blue */
+    font-weight: 600;      /* Slightly bolder to stand out */
+    text-decoration: none; /* Removes the default underline */
+    transition: all 0.2s ease-in-out;
+}
+
+.inline-link-people :hover,
+.inline-link-people :focus {
+    color: #084c75;       /* Darker tone on hover */
+    border-bottom: 1px solid #084c75; /* Becomes a solid line on hover */
+}
+
+
+.inline-logo {
+    height: 1.3em;          /* Sets logo height relative to the text size */
+    width: auto;            /* Maintains the logo's aspect ratio */
+    vertical-align: middle; /* Aligns the logo vertically with the text */
+    margin-right: 4px;      /* Adds a small space after the logo */
+    margin-bottom: 0.2em;   /* Fine-tunes the vertical position (optional) */
+}
+
+/* Social and other related connected websites, e.g. GitHub, LinkedIn, etc. */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 2em;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: #000;
+}
+
+.social-links a:nth-child(2):hover {
+    color: #0077b5;
+}
+
+.social-links a:nth-child(3):hover {
+    color: #4285f4;
+}
+
+.social-links a:nth-child(4):hover {
+    color: #ea4335;
+}
+
+/* Formatting Media */ 
+@media (max-width: 768px) {
+    .publication {
+        flex-direction: column;
+    }
+
+    /* Override Grid for mobile: stack all items vertically */
+    .publication:has(.pub-description) {
+        display: flex;
+        flex-direction: column;
+        gap: 0; /* Adjust gap for stacked layout */
+    }
+
+    .publication:has(.pub-description) .pub-media,
+    .publication:has(.pub-description) .pub-content,
+    .publication:has(.pub-description) .pub-description {
+        width: 100%;
+        margin: 0;
+        grid-column: unset;
+        grid-row: unset;
+        order: unset;
+        align-self: unset;
+    }
+
+    /* This replaces the old .pub-image rule in the media query */
+    .pub-media {
+        width: 100%;
+        height: auto; /* Let height be automatic */
+    }
+
+    .pub-media.vertical-media {
+        flex-direction: column;
+        width: 150px; 
+    }
+
+    .pub-media.vertical-media .pub-media-item {
+        width: 100%;
+        height: 100px; 
+    }
+
+    .name {
+        font-size: 2em;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+.star-count {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 4px; 
+    vertical-align: middle;
+}
+
+.star-count .fa-star {
+    color: #f0c300;
+    font-size: 0.85em;
+    margin-right: 4px;
+}
+
+.github-shield {
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+/* CSS for the custom SVG or PNG image */
+.doodle-arrow-img {
+    height: 1.2em; /* This sets the height relative to the line height (e.g., 120% of the font size) */
+    width: auto;   /* Maintains the image's original aspect ratio */
+    vertical-align: -0.2em; /* Fine-tunes vertical alignment with text baseline */
+    margin: 0 8px;
+    display: inline-block;
+}
+
+/* Other sections for related Stuff, e.g. Interests/Hobbies and Contact */
+.interests-content {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #444;
+}
+
+.contact-section {
+    text-align: center;
+    padding: 40px 0;
+    background: #f9f9f9;
+    border-radius: 12px;
+    margin-top: 60px;
+}
+
+.contact-section h2 {
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* Contact Button */
+.contact-button {
+  display: inline-block;
+  margin-top: 0rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.contact-button:hover {
+  background-color: #1d4ed8;
+}

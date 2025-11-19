@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .pub-item img, .pub-item video {
+            max-height: 150px;
+            border-radius: 0.5rem;
+            object-fit: cover;
+        }
+    
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="images/PXL_20251024_191445021.MP.jpg" alt="Profile Photo"
+                class="profile-image" />
+            <h1 class="text-3xl font-bold mt-4">Christian Homeyer</h1>
+
+            <div class="affiliation-block">
+                <div class="logo-container">
+                    <a href="https://ipa.math.uni-heidelberg.de/" target="_blank">
+                        <img src="images/logo-ipa.svg" alt="IPA Lab Logo" class="affiliation-logo">
+                    </a>
+                    
+                    <a href="https://www.uni-heidelberg.de/" target="_blank">
+                        <img src="images/logo-hd.gif" alt="Heidelberg University Logo" class="affiliation-logo">
+                    </a>
+                </div>
+
+                <p class="title"> PhD Candidate @ 
+                    <a href="https://ipa.math.uni-heidelberg.de/" target="_blank" class="inline-link-institutions">IPA</a>
+                </p>
+                <p class="subtitle"> Heidelberg University 
+                    (<a href="https://scholar.google.com/citations?user=C-5j7CQAAAAJ" target="_blank" class="inline-link-people">Christoph Schnörr</a>) 
+                    Lab
+                </p>
+            </div>
+            
+            <!-- Social icons -->
+            <div class="social-links">
+                <a href="https://github.com/ChenHoy" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/christian-homeyer-06686b277" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=6OIOuo4AAAAJ&hl=de" target="_blank">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </a>
+                <a href="mailto:christianhoy93@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>
+                    Hi!👋<br>
+                    I'm a PhD candidate at <strong>Heidelberg University</strong> working on <strong>3D/4D reconstruction</strong>.<br> 
+                    Previously I was at Bosch Research.<br>
+                    <br>
+                    
+                    My research focuses on reconstructing dynamic scenes from a single camera. 
+                    I have done work on:
+                </p>
+
+                <ul>
+                    <li><strong>Monocular Depth Prediction</strong></li>
+                    <li><strong>Motion Segmentation</strong></li>
+                    <li><strong>SLAM & 3D Rendering</strong></li>
+                </ul>
+
+                </p>
+                    Furthermore, I have some experience with:
+                </p>
+
+                <ul>
+                    <li><strong>Lighting Estimation</strong> (collaboration with 
+                        <a href="https://scholar.google.com/citations?user=UX8qqSkAAAAJ" target="_blank" class="inline-link-people">Haebom Lee</a> 
+                        )</li>
+                    <li> 
+                        <strong>3D Point Cloud Registration</strong>  
+                        (Master thesis @ 
+                        <a href="https://www.rob.cs.tu-bs.de/www.rob.cs.tu-bs.de/index.html" target="_blank" class="inline-link-institutions">IRP</a>, 
+                        under 
+                        <a href="https://scholar.google.com/citations?user=K5XMwe4AAAAJ" target="_blank" class="inline-link-people">Jochen Steil</a>, 
+                        <a href="https://scholar.google.com/citations?user=w_19GwsAAAAJ" target="_blank" class="inline-link-people">Milad Malekzadeh</a> 
+                        ) 
+                        <div class="pub-links">
+                        <a href="https://github.com/ChenHoy/pyreg" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        </div>
+                    </li>
+                    <li><strong>Medical Image Classification</strong> (with 
+                    <a href="https://scholar.google.com/citations?user=gxPVmXMAAAAJ" target="_blank" class="inline-link-people">Stefania Petra</a>, 
+                    to be published)</li>
+                </ul>
+                       
+                </p>
+                    My work lies at the intersection of Computer Vision and Computer Graphics, but I am interested in most things AI.<br>
+                    <br>
+                </p>
+                <p>
+                    I'm grateful that I get to live and work during the Deep Learning revolution and a new robotics renaissance.
+                    I started the PhD, because I wanted to learn more about perception and intelligence in the context of 3D geometry. 
+                    Never thought I would see all of this implemented in actual robots in my lifetime!
+                </p>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <div class="publication">
+                <div class="pub-media vertical-media">
+                    <img src="images/droidsplat/droidsplat.png" alt="Single teaser" class="pub-media-item">
+                    <img src="images/droidsplat/nana4_4.gif" alt="Animation teaser" class="pub-media-item">
+                </div>
+                <div class="pub-content">
+                    <div class="pub-title"> DROID-Splat: Combining end-to-end SLAM with 3D Gaussian Splatting </div>
+                    <div class="pub-authors"><strong>Christian Homeyer</strong>, Leon Begiristain, Christoph Schnörr</div>
+                    <div class="pub-venue">Proceedings of the IEEE/CVF International Conference on Computer Vision 2025</div>
+                    <div class="pub-links">
+                        <a href="https://openaccess.thecvf.com/content/ICCV2025W/NeuSLAM/papers/Homeyer_DROID-Splat_Combining_end-to-end_SLAM_with_3D_Gaussian_Splatting_ICCVW_2025_paper.pdf"><i class="fas fa-file-pdf"></i> Paper </a>
+                        <a href="https://github.com/ChenHoy/DROID-Splat" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                            <span class="star-count">
+                                <i class="fas fa-star"></i>
+                                <img class="github-shield" src="https://img.shields.io/github/stars/ChenHoy/DROID-Splat?style=social" alt="GitHub Stars">
+                            </span>
+                        </a>
+                        <a href="https://arxiv.org/pdf/2411.17660"><i class="fas fa-external-link-alt"></i>Arxiv</a>
+                    </div>
+                </div>
+
+                <div class="pub-description">
+                    <p>
+                        <i class="highlight-text">How to build SotA monocular SLAM with photo-realistic Rendering?</i><br>
+                        We extended an end-to-end Tracker with a i) loop detector ii) loop closure mechanism iii) camera calibration iv) monocular prior integration. 
+                        Together with a photo-realistic Renderer, we can robustly map casual videos (dynamic objects are automatically filtered out). 
+                        All components run in parallel on a consumer-grade GPU.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="publication">
+                <div class="pub-media vertical-media">
+                    <img src="images/lighting/Screenshot 2025-11-17 175614.png" alt="Publication 2 teaser" class="pub-media-item">
+                </div>
+                <div class="pub-content">
+                    <div class="pub-title">Spatio-temporal outdoor lighting aggregation on image sequences using transformer networks</div>
+                    <div class="pub-authors">Haebom Lee, <strong>Christian Homeyer</strong>, Robert Herzog, Jan Rexilius, Carsten Rother</div>
+                    <div class="pub-venue">International Journal of Computer Vision 2023</div>
+                    <div class="pub-links">
+                        <a href="https://link.springer.com/article/10.1007/s11263-022-01725-2"><i class="fas fa-file-pdf"></i> Paper</a>
+                    </div>
+                </div>
+
+                <div class="pub-description">
+                    <p>
+                        <i class="highlight-text">How to improve lighting estimation from video?</i><br>
+                    </p>
+                    Most previous work guesses the light source from single images.<br> 
+                    When using monocular video, predictions can quickly get noisy.<br>
+                    <img src="images/doodle-arrow-right.png" alt="Doodle Arrow" class="doodle-arrow-img">
+                    Use sequences of random crops and robust aggregation of noisy estimates.
+                </div>
+
+            </div>
+
+            <div class="publication">
+                <div class="pub-media vertical-media">
+                    <img src="images/moseg/teaser_moseg.png" alt="Publication 3 teaser" class="pub-media-item contain">
+                    <video class="pub-media-item contain" autoplay loop muted playsinline><source src="images/moseg/davis_modalities.mp4" type="video/mp4"></video>
+
+                </div>
+
+                <div class="pub-content">
+                    <div class="pub-title">On moving object segmentation from monocular video with transformers</div>
+                    <div class="pub-authors"><strong>Christian Homeyer</strong>, Christoph Schnörr</div>
+                    <div class="pub-venue">Proceedings of the IEEE/CVF International Conference on Computer Vision 2023</div>
+                    <div class="pub-links">
+                        <a href="https://openaccess.thecvf.com/content/ICCV2023W/NIVT/papers/Homeyer_On_Moving_Object_Segmentation_from_Monocular_Video_with_Transformers_ICCVW_2023_paper.pdf"><i class="fas fa-file-pdf"></i> Paper</a>
+                        <a href="https://arxiv.org/pdf/2411.19141"><i class="fas fa-external-link-alt"></i> Arxiv</a>
+                    </div>
+                </div>
+
+                <div class="pub-description">
+                    <p>
+                        <i class="highlight-text">Which monocular pseudo-modalities are best for generic motion segmentation?</i><br>
+                        We revisited the motion segmentation problem with a multi-modal network. Surprisingly even 
+                        3D scene flow from relative depth maps can give a strong signal for motion segmentation. 
+                        We systematically built up our datasets to iron out edge cases and try out multiple fusion mechanisms.<br>
+                        Works very well with scale consistent depth now in 2025!
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="publication">
+                <div class="pub-media vertical-media">
+                    <img src="images/deepv2cd/high_level_framework.png" alt="Publication 4 teaser" class="pub-media-item contain">
+                </div>
+
+                <div class="pub-content">
+                    <div class="pub-title">Multi-view monocular depth and uncertainty prediction with deep structure-from-motion in dynamic environments</div>
+                    <div class="pub-authors"><strong>Christian Homeyer</strong>, Oliver Lange, Christoph Schnörr</div>
+                    <div class="pub-venue">International Conference on Pattern Recognition and Artificial Intelligence 2022</div>
+                    <div class="pub-links">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-09037-0_31"><i class="fas fa-file-pdf"></i> Paper</a>
+                        <a href="https://arxiv.org/pdf/2201.08633"><i class="fas fa-external-link-alt"></i> Arxiv</a>
+                    </div>
+                </div>
+                <div class="pub-description">
+                    <p>
+                        <i class="highlight-text">If we do not model dynamic motion inside our network, will we have a bias in our depth predictions?</i>
+                        Turns out that by modeling an additional uncertainty, we can explain many systematic errors on moving objects: especially LiDAR provides only 
+                        sparse supervision. Scaling up datasets with better groundtruth (like synthetic data) should be enough without explicitly modeling dynamics!
+                        We analyzed supervised vs. unsupervised training and the synth-to-real gap for some datasets - All done in <i>TensorFlow 2</i> (it was a long time ago  ¯\_(ツ)_/¯ )
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="interests">
+            <h2>Other Interests</h2>
+            <div class="interests-content">
+                <p>
+                    Outside of research, I like to decompress outdoors and get away from anything digital.<br>
+                    I love hiking, skiing and climbing. 
+                </p>
+
+                <br>
+                <p>
+                    I am a proud parent of a biological learner - Seeing (and helping) another person learn and grow <br>
+                    is the most exciting and satisfying thing in the world.
+                    <br>
+                    ... also surprisingly helps with time management.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact / Footer -->
+        <footer class="text-center py-10 border-t border-gray-200">
+            <h2 class="text-xl font-semibold mb-2">Feel free to reach out!</h2>
+            <a href="mailto:christianhoy93@gmail.com" class="contact-button">
+            <i class="fa-solid fa-envelope mr-2"></i> Email Me
+            </a>
+            <p class="text-gray-500 mt-6 text-sm">&copy; 2025 Christian Homeyer. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>

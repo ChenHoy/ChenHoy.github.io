@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" width="345" height="125" viewBox="0 0 345 125">
+    <polyline points="5,12 2.5,24 15,24 20,8" fill="#0071bc"/>
+    <line x1="10" y1="30" x2="10" y2="77"  stroke-width="15" stroke="#000000"/>
+    <text x="24" y="77" font-family="Verdana,Helvetica,sans-serif" font-size="85" font-weight="bold" >pa</text>
+    <text x="53" y="114" font-family="Verdana,Helvetica,sans-serif" font-size="17">Image &amp; Pattern Analysis</text>
+    <line x1="54" y1="91.5" x2="345" y2="91.5" stroke="#0071bc" stroke-width="5"/>
+</svg>
+
